@@ -1,10 +1,332 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <tilte>Making is dead, Blood is fluel, Hell is full</tilte>
-  </head>
-  <body>
-    <h1>Mago</h1>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braille Up! | Tecnologia e Inclusão</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #101827;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #17243a;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #55d6be;
+            font-size: 28px;
+        }
+
+        header span {
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .hero {
+            padding: 80px 10%;
+            text-align: center;
+            background: linear-gradient(135deg, #17243a, #203d58);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #55d6be;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            color: #d5e1ec;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 25px;
+        }
+
+        h2.section-title {
+            color: #55d6be;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            color: #d5dce5;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #1c2b40;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #30465e;
+        }
+
+        .card h3 {
+            color: #55d6be;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #d5dce5;
+            font-size: 15px;
+        }
+
+        .braille {
+            background: #17243a;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        .dots {
+            display: grid;
+            grid-template-columns: repeat(2, 25px);
+            gap: 12px;
+            justify-content: center;
+            margin: 20px auto;
+        }
+
+        .dot {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #55d6be;
+        }
+
+        .inactive {
+            background: #43546a;
+        }
+
+        .objective {
+            background: #203d58;
+            padding: 35px;
+            border-radius: 12px;
+            margin-top: 25px;
+            border-left: 5px solid #55d6be;
+        }
+
+        footer {
+            background: #0b1220;
+            text-align: center;
+            padding: 25px;
+            color: #aab8c8;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Braille Up!</h1>
+        <span>Tecnologia, educação e inclusão</span>
+    </header>
+
+    <section class="hero">
+        <h2>Conheça o Braille Up!</h2>
+        <p>
+            Um projeto de tecnologia assistiva desenvolvido para
+            facilitar o aprendizado inicial do alfabeto Braille,
+            unindo um aplicativo interativo a um dispositivo físico
+            controlado por Arduino.
+        </p>
+    </section>
+
+    <main class="container">
+
+        <section>
+            <h2 class="section-title">Sobre o projeto</h2>
+
+            <p class="content">
+                O Braille Up! é uma ferramenta tecnológica criada
+                para auxiliar na aprendizagem e no reconhecimento
+                das letras do alfabeto Braille, de A a Z.
+                O projeto combina programação em Python com
+                componentes eletrônicos controlados por Arduino,
+                proporcionando uma experiência de aprendizagem
+                que envolve recursos visuais e táteis.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Como funciona?</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Aplicativo em Python</h3>
+                    <p>
+                        Possui visualização do alfabeto, exercícios
+                        de múltipla escolha, modo livre para montar
+                        combinações de pontos e registro do progresso.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Dispositivo Arduino</h3>
+                    <p>
+                        Recebe as letras enviadas pelo aplicativo
+                        através da comunicação serial e aciona os
+                        seis pontos correspondentes na célula Braille.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Célula de seis pontos</h3>
+                    <p>
+                        Representa fisicamente as combinações
+                        das letras Braille, permitindo trabalhar
+                        o reconhecimento tátil dos caracteres.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Conhecendo a célula Braille</h2>
+
+            <p class="content">
+                O sistema Braille utiliza seis pontos organizados
+                em duas colunas e três linhas. Diferentes combinações
+                desses pontos representam as letras e outros símbolos.
+            </p>
+
+            <div class="braille">
+                <h3>Representação de uma célula Braille</h3>
+
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot inactive"></div>
+
+                    <div class="dot"></div>
+                    <div class="dot inactive"></div>
+
+                    <div class="dot inactive"></div>
+                    <div class="dot inactive"></div>
+                </div>
+
+                <p>Exemplo visual de uma combinação de seis pontos.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Principais funcionalidades</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Alfabeto A–Z</h3>
+                    <p>
+                        Consulta das 26 letras e suas respectivas
+                        combinações de pontos Braille.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Exercícios interativos</h3>
+                    <p>
+                        Perguntas de múltipla escolha para testar
+                        o reconhecimento das letras.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Modo livre</h3>
+                    <p>
+                        Permite ativar e desativar pontos para
+                        formar diferentes combinações.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Progresso</h3>
+                    <p>
+                        Registra as letras aprendidas e acompanha
+                        a sequência de utilização do aplicativo.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Objetivo do Braille Up!</h2>
+
+            <div class="objective">
+                <p>
+                    Nosso principal objetivo é tornar o aprendizado
+                    inicial do alfabeto Braille mais interativo e
+                    acessível, utilizando a tecnologia como uma
+                    ferramenta de apoio à educação e à inclusão.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Estado atual do projeto</h2>
+
+            <p class="content">
+                A comunicação entre o aplicativo Python e o Arduino
+                já está implementada no código, permitindo o envio
+                das letras de A a Z e o acionamento de uma sequência
+                controlada por botão físico. Entretanto, ainda são
+                necessários testes na montagem real para confirmar
+                o funcionamento integrado dos componentes.
+            </p>
+
+            <p class="content">
+                O Braille Up! é um recurso complementar de prática
+                e não substitui o ensino de Braille realizado com
+                acompanhamento de profissionais especializados.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Braille Up! © 2026 - Tecnologia a favor da inclusão.</p>
+    </footer>
+
+</body>
 </html>
