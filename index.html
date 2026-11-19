@@ -15,46 +15,46 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #101827;
-            color: #ffffff;
+            background: #fff5fa;
+            color: #392036;
             line-height: 1.7;
         }
 
         header {
-            background: #17243a;
-            padding: 25px 8%;
+            background: #a00068;
+            padding: 22px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         header h1 {
-            color: #55d6be;
-            font-size: 28px;
+            color: white;
+            font-size: 29px;
         }
 
         header span {
-            color: #ffffff;
+            color: #ffe0f1;
             font-size: 14px;
         }
 
         .hero {
-            padding: 80px 10%;
+            padding: 90px 10%;
             text-align: center;
-            background: linear-gradient(135deg, #17243a, #203d58);
+            background: linear-gradient(135deg, #8c005c, #d62991, #ed76b8);
+            color: white;
         }
 
         .hero h2 {
-            font-size: 42px;
-            margin-bottom: 15px;
-            color: #55d6be;
+            font-size: 45px;
+            margin-bottom: 18px;
         }
 
         .hero p {
             max-width: 750px;
             margin: auto;
             font-size: 18px;
-            color: #d5e1ec;
+            color: #fff0f8;
         }
 
         .container {
@@ -63,14 +63,14 @@
             padding: 55px 25px;
         }
 
-        h2.section-title {
-            color: #55d6be;
+        .section-title {
+            color: #b00072;
             font-size: 28px;
             margin-bottom: 20px;
         }
 
         .content {
-            color: #d5dce5;
+            color: #63465b;
             font-size: 17px;
             margin-bottom: 25px;
         }
@@ -83,27 +83,34 @@
         }
 
         .card {
-            background: #1c2b40;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #30465e;
+            background: white;
+            padding: 27px;
+            border-radius: 15px;
+            border: 1px solid #f2c5df;
+            box-shadow: 0 5px 18px rgba(160, 0, 104, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(160, 0, 104, 0.16);
         }
 
         .card h3 {
-            color: #55d6be;
+            color: #c00080;
             margin-bottom: 12px;
         }
 
         .card p {
-            color: #d5dce5;
+            color: #63465b;
             font-size: 15px;
         }
 
         .braille {
-            background: #17243a;
+            background: #fce3f1;
             padding: 40px 20px;
             text-align: center;
-            border-radius: 12px;
+            border-radius: 15px;
             margin-top: 25px;
         }
 
@@ -119,26 +126,27 @@
             width: 25px;
             height: 25px;
             border-radius: 50%;
-            background: #55d6be;
+            background: #c00080;
         }
 
         .inactive {
-            background: #43546a;
+            background: #e4b5d0;
         }
 
         .objective {
-            background: #203d58;
+            background: #f8d5e9;
             padding: 35px;
-            border-radius: 12px;
+            border-radius: 15px;
             margin-top: 25px;
-            border-left: 5px solid #55d6be;
+            border-left: 6px solid #c00080;
+            color: #57304b;
         }
 
         footer {
-            background: #0b1220;
+            background: #79004f;
             text-align: center;
             padding: 25px;
-            color: #aab8c8;
+            color: white;
             font-size: 14px;
         }
 
@@ -150,6 +158,7 @@
             header {
                 flex-direction: column;
                 gap: 8px;
+                text-align: center;
             }
         }
     </style>
@@ -158,7 +167,7 @@
 <body>
 
     <header>
-        <h1>Braille Up!</h1>
+        <h1>Braille Up! 💗</h1>
         <span>Tecnologia, educação e inclusão</span>
     </header>
 
@@ -176,7 +185,6 @@
 
         <section>
             <h2 class="section-title">Sobre o projeto</h2>
-
             <p class="content">
                 O Braille Up! é uma ferramenta tecnológica criada
                 para auxiliar na aprendizagem e no reconhecimento
@@ -192,7 +200,6 @@
             <h2 class="section-title">Como funciona?</h2>
 
             <div class="cards">
-
                 <div class="card">
                     <h3>Aplicativo em Python</h3>
                     <p>
@@ -219,7 +226,6 @@
                         o reconhecimento tátil dos caracteres.
                     </p>
                 </div>
-
             </div>
         </section>
 
@@ -238,10 +244,8 @@
                 <div class="dots">
                     <div class="dot"></div>
                     <div class="dot inactive"></div>
-
                     <div class="dot"></div>
                     <div class="dot inactive"></div>
-
                     <div class="dot inactive"></div>
                     <div class="dot inactive"></div>
                 </div>
@@ -254,7 +258,6 @@
             <h2 class="section-title">Principais funcionalidades</h2>
 
             <div class="cards">
-
                 <div class="card">
                     <h3>Alfabeto A–Z</h3>
                     <p>
@@ -286,7 +289,6 @@
                         a sequência de utilização do aplicativo.
                     </p>
                 </div>
-
             </div>
         </section>
 
